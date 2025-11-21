@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TICKERTRIBE — Predict Stocks with Your Tribe",
+  title: "TicketTribe — Predict Stocks with Your Tribe",
   description:
     "A web app where friend groups compete by predicting daily stock movements. Make predictions, lock them at 7 PM IST, auto-scoring at 2:30 AM IST, and climb the leaderboard.",
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "tribe stock competition"
   ],
   openGraph: {
-    title: "TICKERTRIBE — Predict Stocks with Friends",
+    title: "TicketTribe — Predict Stocks with Friends",
     description:
       "Compete with friends in private tribes by predicting daily tech stock movements. Scores update automatically after US market close.",
     type: "website",
@@ -51,14 +51,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-<html lang="en">
-          <body
-            className={`${inter.className} antialiased`} suppressHydrationWarning
-          >
-            <Toaster richColors />
-            {children}
-          </body>
-        </html>
+return (
+    <html lang="en">
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
+  <Toaster richColors />
+
+  {/* 🔥 ADD THIS */}
+  <div id="top-layer-portal"></div>
+
+  {children}
+</body>
+
+    </html>
   );
 }

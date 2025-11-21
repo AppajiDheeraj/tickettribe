@@ -42,8 +42,22 @@ export const SignUpView = () => {
         },
     });
 
-    const onSubmit = () => {}
-    const onSocial = () => {}
+    const onSubmit = async () => {
+        setPending(true);
+
+        // your auth logic here...
+
+        router.push("/onboarding");
+    };
+
+    const onSocial = async () => {
+        setPending(true);
+
+        // your OAuth logic here...
+
+        router.push("/onboarding");
+    };
+
 
 
     return (
