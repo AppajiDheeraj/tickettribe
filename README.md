@@ -1,6 +1,7 @@
 # TickerTribe – Daily Stock Prediction Platform
 
 <div align="center">
+<img src="public/logo.svg" width="120" alt="TickerTribe Logo" />
 
 ### Predict. Compete. Climb the Leaderboard.
 
