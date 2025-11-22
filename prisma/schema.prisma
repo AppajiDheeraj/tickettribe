@@ -1,22 +1,17 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  provider = "prisma-client-js"
+  output = ""
 }
 
 datasource db {
   provider = "postgresql"
 }
-
 model User{
   id       Int      @id @default(autoincrement())
   email     String   @unique
   name      String?
+  points    Int      @default(0)
   predictions Prediction[]
   tribes    Tribe[]  
   createdAt DateTime @default(now())
@@ -24,16 +19,18 @@ model User{
 }
 
 model Prediction{
-  id       Int      @id @default(autoincrement())
-  // FUTURE MAKE IT AN ARRAY
-  AAPL     Boolean  
-  MSFT     Boolean
-  GOOGL    Boolean
-  userId   Int
-  isOpen   Boolean  @default(true)
-  user     User     @relation(fields: [userId], references: [id])
+  id        Int      @id @default(autoincrement())
+  AAPL      Boolean
+  MSFT      Boolean
+  GOOGL     Boolean
+  userId    Int
+  date      DateTime 
+  locked    Boolean    @default(false) 
+  user      User     @relation(fields: [userId], references: [id])
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@unique([userId, date])
 }
 
 model Tribe{

@@ -137,7 +137,7 @@ export const SignUpView = () => {
                                         name="confirmPassword"
                                         render={({ field }) => (
                                             <FormItem>
-                                                <FormLabel>Password</FormLabel>
+                                                <FormLabel>Confirm Password</FormLabel>
                                                 <FormControl>
                                                     <div className="relative">
                                                         <Input
@@ -165,7 +165,7 @@ export const SignUpView = () => {
                                 </div>
                                 {!!error && (
                                     <Alert className="bg-destructive/10 border-none ">
-                                        <OctagonAlertIcon className="h-4 w-4 !text-destructive " />
+                                        <OctagonAlertIcon className="h-4 w-4 text-destructive" />
                                         <AlertTitle>{error}</AlertTitle>
                                     </Alert>
                                 )}
@@ -189,7 +189,7 @@ export const SignUpView = () => {
                                         type="button"
                                         className="w-full"
                                         disabled={pending}
-                                        onClick={() => { onSocial() }}                                        >
+                                        onClick={() => { onSocial() }}>
                                         <FaGithub />
                                     </Button>
                                 </div>

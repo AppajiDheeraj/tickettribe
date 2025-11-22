@@ -17,7 +17,6 @@ import { FaGithub, FaGoogle } from "react-icons/fa"
 const formSchema = z.object({
     email: z.string().email(),
     password: z.string().min(1, { message: "Password is required" }),
-
 })
 
 export const SignInView = () => {
@@ -35,8 +34,8 @@ export const SignInView = () => {
         },
     });
 
-const onSubmit = () => {}
-const onSocial = () => {}
+    const onSubmit = () => {}
+    const onSocial = () => {}
 
     return (
         <div className="flex flex-col gap-6">
@@ -96,7 +95,7 @@ const onSocial = () => {}
                                                 <FormMessage />
                                             </FormItem>
                                         )}
-/>
+                                    />
 
                                     <div className="flex justify-end text-xs">
                                         <Link href="/forgot-password" className="text-muted-foreground hover:text-primary underline underline-offset-4">
@@ -106,7 +105,7 @@ const onSocial = () => {}
                                 </div>
                                 {!!error && (
                                     <Alert className="bg-destructive/10 border-none ">
-                                        <OctagonAlertIcon className="h-4 w-4 !text-destructive " />
+                                        <OctagonAlertIcon className="h-4 w-4 text-destructive" />
                                         <AlertTitle>{error}</AlertTitle>
                                     </Alert>
                                 )}

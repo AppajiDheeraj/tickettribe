@@ -1,4 +1,4 @@
-# TickerTribe – Daily Stock Prediction Platform
+# TickerTribe - Daily Stock Prediction Platform
 
 <div align="center">
 <img src="public/logo.svg" width="120" alt="TickerTribe Logo" />
@@ -149,6 +149,6 @@ npm run dev
 
 <div align="center">
 
-TickerTribe – A structured, competitive way to engage with the stock market.
+TickerTribe - A structured, competitive way to engage with the stock market.
 
 </div>

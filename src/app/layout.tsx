@@ -54,13 +54,14 @@ export default function RootLayout({
 return (
     <html lang="en">
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
-  <Toaster richColors />
+      <Toaster richColors />
 
-  {/* 🔥 ADD THIS */}
-  <div id="top-layer-portal"></div>
+      {/* Top layer portal used by some UI libraries */}
+      <div id="top-layer-portal"></div>
 
-  {children}
-</body>
+      {children}
+
+    </body>
 
     </html>
   );
